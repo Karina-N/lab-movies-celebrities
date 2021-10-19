@@ -42,6 +42,12 @@ nav a {
 
 }
 
+.content-box.details {
+  border: 1px solid grey;
+  border-radius: 7px;
+  box-shadow: 7px 3px 3px lightgrey;
+}
+
 
 ul li {
   line-height: 2;
@@ -65,7 +71,7 @@ ul a {
 
 .buttons-box {
   display: flex;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
   padding-top: 20px;
 }
 
@@ -91,14 +97,34 @@ a:hover {
   margin-bottom: 20px;
 }
 
+.content-box.form-box {
+  text-align: center;
+  margin: 40px auto;
+}
+
 .content-box form {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-box input {
+  width: 400px;
+  height: 30px;;
 }
 
 .content-box form button {
   border: none;
   padding: 7px 40px;
+}
+
+textarea {
+  width: 400px;
+  height: 100px;
+}
+
+select {
+  width: 400px;
 }
 
 .content-box form button:hover {
