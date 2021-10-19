@@ -8,16 +8,18 @@
     <input type="text" name="genre" value="{{movie.genre}}" />
   </label>
   <label>Plot
-    <textarea type="text" name="plot" value="{{movie.plot}}"></textarea>
+    <textarea type="text" name="plot" value="">{{movie.plot}}</textarea>
   </label>
 
   <label>
     Cast
     <select name="cast">
-      <option selected value="{{movie.cast}}"></option>
-      {{#each celebritiesFromDb}}
+      <option value="" selected>{{movie.cast.0.name}}</option>
+
+      {{#each remainingCelebrities}}
         <option value="{{this._id}}"> {{this.name}} </option>
       {{/each}}
+
     </select>
   </label>
 
