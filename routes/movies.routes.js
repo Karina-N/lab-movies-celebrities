@@ -60,10 +60,10 @@ router.get("/movies/:movieId/edit", (req, res, next) => {
 
 router.post("/movies/:movieId/edit", (req, res, next) => {
   const { movieId } = req.params;
-  const { title, genre, plot, cast } = req.body;
-  console.log(req.body);
+  const { title, genre, plot} = req.body;
+  const actor = req.body.cast ;
 
-  Movie.findByIdAndUpdate(movieId, { title, genre, plot, cast }, { new: true })
+  Movie.findByIdAndUpdate(movieId, { title, genre, plot, actor }, { new: true })
     .populate("cast")
     .then((updatedMovie) => {
       console.log("POPULATE", updatedMovie);
